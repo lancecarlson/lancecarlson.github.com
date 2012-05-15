@@ -19,7 +19,7 @@ Enter [Gem in a Box](https://github.com/cwninja/geminabox) - Really simple rubyg
 gem inabox pkg/mygem-0.0.1.gem --host myprivategemserver.com
 {% endhighlight %}
 
-To automate the task of pushing to my private gem server, I created a Raketask that has all of the standard gem building tasks but with a with the **inabox** command twist.
+To automate the task of pushing to my private gem server, I created a Rake task that has all of the standard gem building tasks but with the **inabox** command twist.
 
 {% highlight ruby %}
 require 'rubygems'
