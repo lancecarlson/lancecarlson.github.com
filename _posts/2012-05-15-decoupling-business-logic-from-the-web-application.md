@@ -34,11 +34,17 @@ Uncle Bob's talk inspired me to try to isolate away my business rules into a sep
 module SApp
   module AuthenticateUser
     class << self
+      attr_reader :action
       def authenticate(account, username, password)
         @account, @username, @password = account, username, password
 
         find_account
-        # More authentication logic
+
+        if account_found? && valid_credentials?
+          view_success
+        else
+          view_login_error
+        end
       end
 
       # some methods like this:
@@ -50,6 +56,8 @@ module SApp
 
       def valid_credentials?
       end
+
+      ### etc ###
 
       private
 
@@ -69,7 +77,14 @@ class SessionController < ApplicationController
   before_filter :find_account
 
   def create
-    SApp::AuthenticateUser.authenticate(account, params[:username], params[:password])
+    authenticate = SApp::AuthenticateUser.authenticate(account, params[:username], params[:password])
+    action = authenticate.action
+    if action != :login_error
+      redirect_to "/#{action}"
+    else
+      flash[:error] = "Login failed"
+      redirect_to :back
+    end
   end
 
   protected
@@ -87,7 +102,14 @@ before '/authenticate' do
 end
 
 post '/authenticate' do
-  SApp::AuthenticateUser.authenticate(@account, params[:username], params[:password])
+  authenticate = SApp::AuthenticateUser.authenticate(@account, params[:username], params[:password])
+  action = authenticate.action
+  if action != :login_error
+    redirect to("/#{action}")
+  else
+    flash[:error] = "Login failed"
+    redirect to('/')
+  end
 end
 {% endhighlight %}
 
@@ -123,7 +145,7 @@ It is important to note that I intentionally did not pass the entire params hash
 
 I intentionally left out the Entities from my examples and you might also notice that I am making calls to the database from my use cases. I will explain my reasoning in the next chapter on my quest for a better architecture... which is coming soon.
 
-Here is a high level diagram of what we've just implemented:
+Here is a high level diagram of the idea:
 
 <img src="/img/interactors.png">
 
