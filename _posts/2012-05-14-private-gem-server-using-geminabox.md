@@ -70,3 +70,5 @@ export HPGEMS_URL=myprivategemserver.com
 {% endhighlight %}
 
 When you run bundle install on your gems, it will look for dependencies at [rubygems.org](http://rubygems.org) and your private gem server.
+
+[HN Discussion](http://news.ycombinator.com/item?id=3975365)
