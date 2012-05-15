@@ -27,4 +27,5 @@ References:
 * [Object Oriented Software Engineering: A Use Case Driven Approach](http://en.wikipedia.org/wiki/Object-oriented_software_engineering)
 
 Resources: 
+
 * [Setting up your own private gem server](/2012/05/14/private-gem-server-using-geminabox.html).
