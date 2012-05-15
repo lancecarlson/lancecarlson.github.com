@@ -138,6 +138,7 @@ describe SApp::AuthenticateUser do
       end
     end
   end
+  ### ... more tests ... ###
 end
 {% endhighlight %}
 
