@@ -29,3 +29,5 @@ References:
 Resources: 
 
 * [Setting up your own private gem server](/2012/05/14/private-gem-server-using-geminabox.html).
+
+[HN Discussion](http://news.ycombinator.com/item?id=3976806)
