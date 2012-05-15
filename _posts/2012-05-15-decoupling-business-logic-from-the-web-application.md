@@ -123,4 +123,8 @@ It is important to note that I intentionally did not pass the entire params hash
 
 I intentionally left out the Entities from my examples and you might also notice that I am making calls to the database from my use cases. I will explain my reasoning in the next chapter on my quest for a better architecture... which is coming soon.
 
+Here is a high level diagram of what we've just implemented:
+
+<img src="/img/interactors.png">
+
 As always, feedback is appreciated!
