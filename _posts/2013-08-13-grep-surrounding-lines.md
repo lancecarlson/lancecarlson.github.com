@@ -7,12 +7,13 @@ Today I was scanning the logs of one our node apps because a client was having i
 
 The trick is with these flags. 
 
-```bash
+<pre>
 Context control:
   -B, --before-context=NUM  print NUM lines of leading context
   -A, --after-context=NUM   print NUM lines of trailing context
   -C, --context=NUM         print NUM lines of output context
-```
+</pre>
 
 References:
+
 * http://stackoverflow.com/questions/9081/grep-a-file-but-show-several-surrounding-lines
