@@ -29,5 +29,8 @@ References:
 Resources: 
 
 * [Setting up your own private gem server](/2012/05/14/private-gem-server-using-geminabox.html).
+* [James Coplien - The DCI Architecture: Supporting the Agile Agenda](http://vimeo.com/8235574)
+* [Trygve Reenskaug - DCI: Re-thinking the foundations of object orientation and of programming](http://vimeo.com/8235394)
+* [http://clean-ruby.com/](http://clean-ruby.com/)
 
 [HN Discussion](http://news.ycombinator.com/item?id=3976806)
