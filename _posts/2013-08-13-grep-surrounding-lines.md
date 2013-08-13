@@ -22,4 +22,4 @@ tail -n 10000 | grep -B 20 '500 -'
 
 References:
 
-* http://stackoverflow.com/questions/9081/grep-a-file-but-show-several-surrounding-lines
+* [http://stackoverflow.com/questions/9081/grep-a-file-but-show-several-surrounding-lines](http://stackoverflow.com/questions/9081/grep-a-file-but-show-several-surrounding-lines)
